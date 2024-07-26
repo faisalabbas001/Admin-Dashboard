@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
-import AuthProvider from "./context/AuthProvider";
+
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Admin Dashboard",
+  title: "Signup Page",
   description: "Admin Dashboard",
 };
 
@@ -23,10 +23,7 @@ export default function RootLayout({
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
       </head>
-      <body className={inter.className}>
-      <AuthProvider>{children}</AuthProvider>
-        
-        </body>
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }
